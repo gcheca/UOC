@@ -57,18 +57,15 @@ typedef struct {
 	int nHotels;
 } tHotelTable;
 
-/*************** PR1 EX1  *****************/
 typedef enum { SINGLE, MARRIED, SEPARATED, DIVORCED, WIDOWED } tCivilState; 
 typedef enum { FAMILIAR, CONSERVATIVE, ADVENTUROUS, LONELY, CURIOUS, INNOVATIVE, DARED } tProfile; 
-/******************************************/
 
 typedef struct {
   int day, month, year;
 } tDate;
 
 typedef struct {
-    tCustomerId id;
-/*************** PR1 EX1  *****************/
+ 	tCustomerId id;
 	char name[MAX_NAME];
 	char surname[MAX_SURNAME];
 	char docNumber[MAX_DOC_NUMBER];
@@ -79,7 +76,6 @@ typedef struct {
 	int bookingsCounter;
 	int points;
 	float satisfaction;
-/******************************************/
 } tCustomer;
 
 typedef struct {
