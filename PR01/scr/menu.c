@@ -24,7 +24,6 @@ int getOption(int numOptions) {
 void readCustomer(tCustomer *customer, tError *retVal) 
 {
 	*retVal = OK;
-/*************** PR1 EX2  *****************/
 	int number;
 	char buffer[MAX_LINE];
 	int length;
@@ -133,8 +132,6 @@ void readCustomer(tCustomer *customer, tError *retVal)
     customer->bookingsCounter=0;
     customer->points=0;
     customer->satisfaction=0.00;
-
-/******************************************/
 }
 
 void readHotel(tHotel *hotel, tError *retVal) {	
@@ -288,7 +285,6 @@ void printCustomerTable(tCustomerTable table) {
 void allCustomersRecommendation(tAppData appData,
                                 char *city, float price, float distance, int points) 
 {
-/*************** PR1 EX5B *****************/ 
 	int i,j;	
 	tHotelTable *result;
 										//	CHECK THIS
@@ -301,8 +297,6 @@ void allCustomersRecommendation(tAppData appData,
 	//	printHotel(appData.hotels.table[j],);
 	//	printHotel()
 	//	printCustomer(appData.customers.table[i],);	
-	
-/******************************************/
 }
 
 /*****************
