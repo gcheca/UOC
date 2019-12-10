@@ -78,27 +78,23 @@ void convertToUpper( char *string )
 
 int strcmpUpper( char *s1, char *s2 )
 {
-    int result= 0;
-/*************** PR1 EX3A *****************/
+  	  int result= 0;
 	char s1Up[MAX_NAME];
 	char s2Up[MAX_NAME];
-	
+
 	strcpy(s1Up,s1);
 	strcpy(s2Up,s2);
-	
+
 	convertToUpper(s1Up);
 	convertToUpper(s2Up);
-	
-	result= (strcmp(s1Up,s2Up));
 
-/******************************************/
+	result= (strcmp(s1Up,s2Up));
     return result;
 }
 
 int customer_cmp(tCustomer d1, tCustomer d2) 
 {	
 	int result = 0;
-/*************** PR1 EX3B *****************/
 	result = strcmpUpper(d1.name,d2.name);
 	if(result==0)
 	{
@@ -154,7 +150,6 @@ int customer_cmp(tCustomer d1, tCustomer d2)
 			}
 		}
 	}
-/******************************************/
     return result;
 }
 
@@ -211,7 +206,6 @@ int customerTable_find(tCustomerTable tabCustomer, tCustomerId id) {
 
 void customerTable_del(tCustomerTable *tabCustomer, tCustomer customer) 
 {	
-/*************** PR1 EX7 *****************/
 	int i;
 	int pos;
 	
@@ -224,8 +218,6 @@ void customerTable_del(tCustomerTable *tabCustomer, tCustomer customer)
 		}
 		tabCustomer->nCustomers=tabCustomer->nCustomers-1;
 	}
-				
-/******************************************/
 }
 
 void customerTable_save(tCustomerTable tabCustomer, const char* filename, tError *retVal) {
@@ -296,7 +288,6 @@ int calculateAge( tDate birthDate )
 
 void customerTable_selectCustomers(tCustomerTable customers, char *city, tCustomerTable *result) 
 {
-/*************** PR1 EX4A *****************/
 	int i;
 	tError retVal;
 	
@@ -318,11 +309,9 @@ void customerTable_selectCustomers(tCustomerTable customers, char *city, tCustom
 			}
  		}
 	}
-/******************************************/
 }
 
 void customerTable_selectSatisfiedCustomers(tCustomerTable customers, tCustomerTable *result) {
-/*************** PR1 EX4B *****************/
 	int i;
 	tError retVal;
 	
@@ -338,13 +327,11 @@ void customerTable_selectSatisfiedCustomers(tCustomerTable customers, tCustomerT
 			}
 		}
 	}
-/******************************************/
 }
 
 float customerTable_getAvgPointsPerBooking(tCustomerTable tabCustomer) 
 {
     float avg= 0.0;
-/*************** PR1 EX6A *****************/ 
 	int i;
 	//INITIALIZED VARS FROM 0.0 (REAL NUMBERS)
 	float tPoints= 0.0;
@@ -363,14 +350,12 @@ float customerTable_getAvgPointsPerBooking(tCustomerTable tabCustomer)
 	{
 		avg = (tPoints/tBookings);
 	}
-/******************************************/
     return avg;
 }
 
 void customerTable_getMaxSatisfactionPerAgeInterval(tCustomerTable tabCustomer,
      float *upto29, float *between30and44, float *between45and59, float *from60) 
 {
-/*************** PR1 EX6B *****************/
 	int i;
 	//INITIALIZED VARS FROM 0.0 (REAL NUMBERS)
 	*upto29=0.0;
@@ -412,6 +397,5 @@ void customerTable_getMaxSatisfactionPerAgeInterval(tCustomerTable tabCustomer,
 			}
 		}
 	}
-/******************************************/
 }
 
